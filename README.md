@@ -209,7 +209,4 @@ npm run build
 ---
 
 Built with ❤️ using Django, React, and AI
-<<<<<<< HEAD
-=======
 
->>>>>>> d083f7245334c8541f9738cef9dd733cad27b766
