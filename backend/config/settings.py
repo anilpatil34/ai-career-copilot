@@ -35,10 +35,6 @@ INSTALLED_APPS = [
     'ai_engine',
 ]
 
-CSRF_TRUSTED_ORIGINS = [
-    "https://ai-career-copilot-phi.vercel.app/"
-]
-
 # ─── Middleware ───────────────────────────────────────────────────────────────
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -93,7 +89,7 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
+            'NAME' BASE_D:IR / 'db.sqlite3',
         }
     }
 
@@ -161,9 +157,16 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',
     'http://127.0.0.1:5173',
     'http://localhost:3000',
-    'https://ai-career-copilot-phi.vercel.app/'
 ]
 CORS_ALLOW_CREDENTIALS = True
+
+CORS_ALLOW_ALL_ORIGINS = True
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://ai-career-copilot-phi.vercel.app"
+]
+
+
 
 # ─── AI Configuration ───────────────────────────────────────────────────────
 AI_PROVIDER = config('AI_PROVIDER', default='groq')
