@@ -35,6 +35,10 @@ INSTALLED_APPS = [
     'ai_engine',
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://ai-career-copilot-phi.vercel.app/"
+]
+
 # ─── Middleware ───────────────────────────────────────────────────────────────
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -109,7 +113,7 @@ USE_TZ = True
 
 # ─── Static & Media Files ────────────────────────────────────────────────────
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_URL = '/media/'
@@ -157,6 +161,7 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',
     'http://127.0.0.1:5173',
     'http://localhost:3000',
+    'https://ai-career-copilot-phi.vercel.app/'
 ]
 CORS_ALLOW_CREDENTIALS = True
 
