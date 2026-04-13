@@ -1,0 +1,12 @@
+Django>=5.0,<6.0
+djangorestframework>=3.15
+djangorestframework-simplejwt>=5.3
+django-cors-headers>=4.3
+python-decouple>=3.8
+whitenoise>=6.5
+gunicorn>=22.0
+openai>=1.30
+PyPDF2>=3.0
+python-docx>=1.1
+mysqlclient>=2.2
+Pillow>=10.0
